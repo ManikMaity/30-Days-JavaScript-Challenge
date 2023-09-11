@@ -59,7 +59,7 @@ console.log(y);
 console.log(typeof 1);
 console.log(typeof 3.55);
 console.log(typeof true);
-console.log(typeof null);
+console.log(typeof y);
 console.log(typeof undefined);
 
 
@@ -80,3 +80,20 @@ console.log(typeof undefined);
 
  //____________________________Naming in js_____________________________
 
+// camelCase - thisIsCamelCase naming (ex - firstName, heyThere)
+
+
+// Invailid Variables 
+// first-name
+// 1_num
+// num_#_1
+
+// ___________________________________Variaable Diclair__________________________
+
+// let variableNane = value;
+
+let myAge = 19;
+const myName = "Manik";
+const girlfriend = false; //Forver single
+
+console.log(myName, myAge, girlfriend);
