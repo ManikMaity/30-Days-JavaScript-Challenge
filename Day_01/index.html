@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 01</title>
+
+    <!-- Internal js -->
+    <script>
+        console.log("This is a internal script in head!");
+    </script>
+</head>
+<body>
+
+    <!-- this is a inline script  -->
+    <button onclick="alert('Hello, There!');" >Say Hello</button>
+
+    
+    <!-- Internal Script  -->
+    <script>
+        console.log("This is a inernal script in the body!");
+    </script>
+
+
+    <!-- This is a external script  -->
+    <script src="./01-Intro.js"></script>  <!-- main js file will be below all other script -->
+</body>
+</html>
