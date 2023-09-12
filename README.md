@@ -9,14 +9,7 @@
 | **Days** | **What Learned?** | **Checkbox** |
 |:--------:|:-----------------:|:------------:|
 | **1**    |        <ul><li>Console.log()</li><li>Js variables</li><li>Js Naming</li><li>Using Js in webpage</li><li>Data Types In Js</li></ul>           |   :heavy_check_mark:         |
-| **2**    |  <ul> <li>Primitive Data Types</li>
- <li>Non-Primitive Data Types</li>
- <li>Arrays</li>
- <li>Numbers</li>
- <li>Math Objects</li>
- <li>Strings</li>
- <li>Concetenating String</li>
- <li>Escape Charecter</li></ul>                 | :heavy_check_mark:           |
+| **2**    |  <ul><li>Primitive Data Types</li><li>Non-Primitive Data Types</li><li>Arrays</li><li>Numbers</li><li>Math Objects</li><li>Strings</li><li>Concetenating String</li><li>Escape Charecter</li></ul>                 |:heavy_check_mark:            |
 | **3**    |                   |            |
 | **4**    |                   |            |
 | **5**    |                   |            |
