@@ -2,13 +2,13 @@
 
 ## This is the GitHub Repository for [30 days Javascript learning challenge](https://30dayjavascript.js.org/)!.
 
-### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/0)
+### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/3)
 
 ## Table Of Content<hr>
 
 | **Days** | **What Learned?** | **Checkbox** |
 |:--------:|:-----------------:|:------------:|
-| **1**    |        <ul><li>Samle Text</li><li>Samle Text</li><li>Samle Text</li></ul>           |   :heavy_check_mark:         |
+| **1**    |        <ul><li>Console.log()</li><li>Js variables</li><li>Js Naming</li><li>Using Js in webpage</li><li>Data Types In Js</li></ul>           |   :heavy_check_mark:         |
 | **2**    |                   |            |
 | **3**    |                   |            |
 | **4**    |                   |            |
