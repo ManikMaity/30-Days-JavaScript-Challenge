@@ -90,3 +90,9 @@ console.log(sGood.startsWith("Suman"));
 
 //endsWith()
 console.log(sGood.endsWith("!"));
+
+//repeat() || repeat the string 10 times
+let fName = "Hey";
+console.log(fName+fName[fName.length-1].repeat(20)+"!");
+
+
