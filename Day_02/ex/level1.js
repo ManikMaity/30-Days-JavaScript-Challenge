@@ -62,3 +62,14 @@ console.log(withSpaces.trim());
 console.log(challenge.startsWith("30"));
 //22
 console.log(challenge.endsWith("Script"));
+
+//23
+console.log(challenge.match(/a/g)); // Use /a/gi to find all the A/a 's case insensitive
+ //24
+let a1 = "30 Days of";
+let a2 = " ";
+let a3 = "JavaScrpit";
+console.log(a1.concat(a2, a3));
+
+//25
+console.log(challenge.repeat(2));
