@@ -2,10 +2,10 @@
 give feedback:'You are old enough to drive' but if not 18 give another 
 feedback stating to wait for the number of years he needs to turn 18. */
 
-// let uAge  = prompt("Enter Age: ", 18);
-// uAge >= 18
-// ? alert(`Your'e old enough to drive`)
-// : alert(`Your'e left ${18 - uAge} years to drive`)
+let uAge  = prompt("Enter Age: ", 18);
+uAge >= 18
+? alert(`Your'e old enough to drive`)
+: alert(`Your'e left ${18 - uAge} years to drive`)
 
 
 /* Compare the values of myAge and yourAge using if … else. 
@@ -14,16 +14,16 @@ Use prompt(“Enter your age:”) to get the age as input. */
 
 
 
-// let yourAge = parseInt(prompt("Enter Your Age: ", 30));
-// let myAge = 19;
-// if (yourAge > myAge)
-// {
-//     alert(`your'e ${yourAge - myAge} years older than me`);
-// }
-// else
-// {
-//     alert(`I'm ${myAge - yourAge} years older than you`);
-// }
+let yourAge = parseInt(prompt("Enter Your Age: ", 30));
+let myAge = 19;
+if (yourAge > myAge)
+{
+    alert(`your'e ${yourAge - myAge} years older than me`);
+}
+else
+{
+    alert(`I'm ${myAge - yourAge} years older than you`);
+}
 
 /*If a is greater than b return 'a is greater than b' else 'a is less than b'. 
 Try to implement it in to ways: 1. using if else 2. ternary operator. */
@@ -143,3 +143,36 @@ switch (month)
 }
 
 alert (`The seoson is ${season}`);
+
+// Check if a day is weekend day or a working day. Your script will take day as an input. 
+let day = prompt("What is the day today? ", "Saturday").toLowerCase();
+
+if (day == "saturday" || day == "sunday")
+{
+    alert(`${day} is a weekend`);
+}
+else if (day.includes("day") == false)
+{
+    alert(`${day} is not a valid Day`);
+}
+else 
+{
+    alert(`${day} is a woking day`);
+}
+
+// Write a program which tells the number of days in a month.
+// Write a program which tells the number of days in a month, now consider leap year. 
+let month1 = prompt("Enter the month- ", "Mrach").toLowerCase();
+let allMonths = "January, February, March, April, May, June, July, August, September, October, November, December";
+allMonths = allMonths.toLowerCase();
+let array = allMonths.split(", ");
+let daysInMonths = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+ for (let i = 0; i < 12; i++)
+ {
+    if (array[i] == month1)
+    {
+        month1 = month1[0].toUpperCase()+month1.substring(1, (month1.length));
+        alert(`${month1} have ${daysInMonths[i]} days`);
+    }
+ }
