@@ -2,7 +2,7 @@
 
 ## This is the GitHub Repository for [30 days Javascript learning challenge](https://30dayjavascript.js.org/)!.
 
-### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/9)
+### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/13)
 
 ## Table Of Content<hr>
 
