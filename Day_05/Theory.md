@@ -43,6 +43,9 @@ These are some of the available methods to deal with arrays:Array, length, conca
     - It merges two arrays
 - Getting array length
 - Getting index an element in arr array
+- Getting last index of an element in array
+- includes:To check if an item exist in an array
+- check if the data type is an array 
 
 ### fill
     const Xes = Array(4).fill("X");
@@ -53,5 +56,18 @@ These are some of the available methods to deal with arrays:Array, length, conca
     const h2 = [6,7,8,9,10];
     const h3 = h1.concat(h2);
     console.log(h3);
-### indexOf()
+### indexOf(the array irtem)
     let a2 = (names.indexOf("manik"));
+
+### .lastIndexOf(array item)
+    const numbers = [1, 2, 3, 4, 5, 3, 1, 2];
+    console.log(numbers.lastIndexOf(1)); // 6
+
+### .includes(item)
+    console.log(webDev.includes("html")); // true
+
+### Array.isArray(array)
+    const num1 = [9,8,7,6,5,4,3,2,1];
+    let num2 = "987654321";
+    console.log(Array.isArray(num1)); //true
+    console.log(Array.isArray(num2)); //false
