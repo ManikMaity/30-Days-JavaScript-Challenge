@@ -46,6 +46,17 @@ These are some of the available methods to deal with arrays:Array, length, conca
 - Getting last index of an element in array
 - includes:To check if an item exist in an array
 - check if the data type is an array 
+- Converting array to string
+    - using .toString();
+    - using .join(element joining value);
+- Slice array elements
+- Adding item to an array using push
+- Removing the end element using pop
+- Removing an element from the beginning
+- Adding an element from the beginning
+- Reversing array order
+- Sorting elements in array
+- Array of arrays
 
 ### fill
     const Xes = Array(4).fill("X");
@@ -71,3 +82,56 @@ These are some of the available methods to deal with arrays:Array, length, conca
     let num2 = "987654321";
     console.log(Array.isArray(num1)); //true
     console.log(Array.isArray(num2)); //false
+### array.toString()
+    let a1 = ["manik", " is", " a", " good", " boy."];
+    console.log(a1);
+    let a2 = a1.toString();
+    a2 = a2.replace(/,/g, "");
+    console.log(a2);
+
+### array.join()
+    let a3 = a1.join();
+    console.log(a3); // simple join
+    console.log(a1.join("")); //join thee array without ,
+    let b1 = ["hey", "whats", "up"];
+    console.log(b1.join(" ")); // join the array item using space in between
+    console.log(b1.join("#")); // join the array item using # in between
+
+### .slice(sarting index, ending index)
+    let c1 = ["apple", "orange", "banana", "watermalon", "guava"];
+    let c2 = c1.slice() // copy all items i array
+    console.log(c2);
+    let  c3 = c1.slice(1); // copy all the elements from index 1
+    console.log(c3);
+    let c4 = c1.slice(1, 3); // copy elements from index1 to index2 (doesn't include the last index3(last) element )
+    console.log(c4);
+### array.push(item to add in last index)
+    let d1 = ["TVS", "Honda", "Hero", "RoyelEnfield"];
+    d1.push("KTM");
+    console.log(d1, d1[d1.length - 1]); // output the whole array and last index item
+    
+### array.pop();
+    d1.pop();
+    console.log(d1); //out the last index
+### array.shift()
+    d1.shift();
+    console.log(d1); // revmovee the TVS
+
+### array.unshift(element to include in first index)
+    d1.unshift("Ola EV");
+    console.log(d1); // add Ola EV in first
+
+### array.reverse()
+    let e1 = [1,2,3,4,5,6,7];
+    console.log(e1);
+    console.log(e1.reverse()); // reversed array
+
+### array.sort()
+    d1.sort();
+    console.log(d1); // sort the array items alphabetically
+    d1.reverse();
+    console.log(d1); // revese alphabatically
+    
+# array of arrays
+    let f1 = [["suman", "swapan", "malati"], ["pritam", "asanta", "DJ"]];
+    console.log(f1[1][f1[1].length  -1]); //DJ
