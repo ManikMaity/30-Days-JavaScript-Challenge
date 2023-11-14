@@ -211,10 +211,85 @@ console.log(arr2); //[ 27, 65, 54, 99, 50 ]
 // Develop a small script which generate a six characters random id: 5j2khz
 
 const chars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
-console.log(chars)
 let id = [];
 for (let i =0; i < 5; i++){
     let rNum = Math.floor(Math.random()*(chars.length));
     id.push(chars[rNum]);
 }
 console.log("id: "+id.join(""));  //id: anb82
+
+// Write a script which generates a random hexadecimal number.
+let hexChar = ["a", "b", "c", "d", "e", "f", 1,2,3,4,5,6,7,8,9];
+let hexCode = [];
+for (let i = 0; i <6; i++){
+    let hexNum = Math.floor(Math.random()*(hexChar.length));
+    hexCode.push(hexChar[hexNum]);
+}
+console.log("Color Code: #"+hexCode.join("")) // Color Code: #652eef 
+
+
+// Write a script which generates a random rgb color number.rgb(240,180,80)
+let rgbColor = [];
+for (let i = 0; i<3; i++){
+    let rgbCode = Math.floor(Math.random()*256);
+    rgbColor.push(rgbCode);
+}
+console.log(`rgb(${rgbColor.join(",")})`); //rgb(82,175,90)
+
+// Using the above countries array, create the following new array.
+// ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+
+// Using the above countries array, create an array for countries length'.
+// [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+
+let newCountry = [];
+let countryLenght = [];
+for (let i = 0;  i<countries.length; i++){
+    newCountry.push(countries[i].toUpperCase());
+    countryLenght.push(countries[i].length);
+}
+console.log(newCountry);
+console.log(countryLenght);  
+
+/* [
+    'ALBANIA',  'BOLIVIA',
+    'CANADA',   'DENMARK',
+    'ETHIOPIA', 'FINLAND',
+    'GERMANY',  'HUNGARY',
+    'IRELAND',  'JAPAN',
+    'KENYA'
+  ]
+  [
+    7, 7, 6, 7, 8,
+    7, 7, 7, 7, 5,
+    5
+  ] */
+
+//   Use the countries array to create the following array of arrays:
+
+//   [
+//   ['Albania', 'ALB', 7],
+//   ['Bolivia', 'BOL', 7],
+//   ['Canada', 'CAN', 6],
+//   ['Denmark', 'DEN', 7],
+//   ['Ethiopia', 'ETH', 8],
+//   ['Finland', 'FIN', 7],
+//   ['Germany', 'GER', 7],
+//   ['Hungary', 'HUN', 7],
+//   ['Ireland', 'IRE', 7],
+//   ['Iceland', 'ICE', 7],
+//   ['Japan', 'JAP', 5],
+//   ['Kenya', 'KEN', 5]
+// ]
+
+let allCountry = [];
+
+for (let i = 0; i < countries.length; i++){
+    let oneCounrty = [];
+    let count = countries[i];
+    oneCounrty.push(count);
+    oneCounrty.push(count.substring(0, 3).toUpperCase());
+    oneCounrty.push(count.length);
+    allCountry.push(oneCounrty);
+}
+console.log(allCountry);
