@@ -65,7 +65,7 @@ const array1 = [5, 4, 6, 8, 10];
 console.log(arraySum(array1)); // 33
 ```
 
-### Unlimited Peramiter
+### Unlimited Peramiter & argumnets
 ```js
 function sumOfAll (){
     let sum =0;
@@ -76,7 +76,7 @@ function sumOfAll (){
 }
 console.log(sumOfAll(1, 2, 4, 8)); // 15
 ```
-### Unlimited Peramiters in arrow function
+### Unlimited Peramiters in arrow function & rest operators
 ```js
 // We have to use spred operator with argument name in arraow function for  unlimeted 
 const userFullName = (...names) =>{
@@ -90,4 +90,57 @@ const userFullName = (...names) =>{
 
 console.log(userFullName("manik", "kumar", "prasad", "maity")); // Mnaik Kumar Prasad Maity
 console.log(userFullName("manik", "maity")); // Manik miaty
+```
+## Anonymous Function
+```js
+const anonymousFun = function() {
+    console.log(
+      'I am an anonymous function and my value is stored in anonymousFun'
+    )
+  }
+```
+
+## Arrow Function
+
+```js
+// Without perameters
+const alsoMyName = () =>{
+    console.log("Manik Maity2")
+}
+```
+
+```js
+// Single Perameter
+const square = n => {
+    return n**2;
+}
+console.log(square(3));
+```
+
+```js
+// More then one peremeter & without return
+const fullName  = (firstName, lastName) => `${firstName} ${lastName}`;
+let myname = fullName("Manik", "Maity");
+console.log(myname); // Manik Maity
+```
+
+
+##  Function with default peramiter
+
+```js
+function userMassege (name = "User"){
+    return `Hello!, ${name}.`;
+}
+console.log(userMassege("Manik")); // Hello!, Manik.
+console.log(userMassege());  // Hello!, User.
+
+```
+
+```js
+const userAge = (birthYear, currentYear = 2023) => {
+    let age = currentYear - birthYear;
+    return age;
+}
+console.log(userAge(2003, 2024)); //21
+console.log(userAge(2003)); //20
 ```

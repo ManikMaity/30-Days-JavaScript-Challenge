@@ -69,9 +69,11 @@ console.log(userFullName("manik", "maity")); // Manik miaty
 
 
 // Anonymous Function
-
+// function without name
 const anonymousFun = function() {
     console.log(
       'I am an anonymous function and my value is stored in anonymousFun'
     )
   }
+
+
