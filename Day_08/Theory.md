@@ -143,3 +143,29 @@ check if a specific key or property exist in an object
 let isGreet = person.hasOwnProperty("address");
 console.log(isGreet); //true
 ```
+
+## Extra learned 
+- Learned how to import code to js file from another js file
+```js
+// tools.js
+// ========
+module.exports = {
+  foo: function () {
+    // whatever
+  },
+  bar: function () {
+    // whatever
+  }
+};
+
+var zemba = function () {
+}
+```
+```js
+// app.js
+// ======
+var tools = require('./tools');
+console.log(typeof tools.foo); // => 'function'
+console.log(typeof tools.bar); // => 'function'
+console.log(typeof tools.zemba); // => undefined
+```
