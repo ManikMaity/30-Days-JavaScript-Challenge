@@ -76,3 +76,70 @@ console.log(userData.age) //21
 userData["firstName"] = "Suman";
 console.log(userData.firstName + " "+ userData.lastName);
 ```
+
+ ## Object Methods and this
+ ```js
+ let userName = {
+    firstName: "Manik", 
+    lastName : "Maity",
+    greet : function process() {
+        return `Hello!, ${this.firstName} ${this.lastName}`;
+    }
+}
+console.log(userName.greet())
+```
+
+## Srtting new key for object 
+```js
+  console.log(person);
+  person.city = "Kolkata"; //changing exiting key value
+  person.isStudent = true; // adding new key and value
+  person.degree = "B.com";
+console.log(person);
+```
+
+## Object methods: 
+- Object.assign
+- Object.keys
+- Object.values
+- Object.entries
+- hasOwnProperty
+
+### Object.assign
+Copy all data from an exiting object
+```js
+let copyUserName = Object.assign({}, userName);
+console.log(copyUserName);
+```
+
+### Object.keys 
+copy keys and returns as array
+
+```js
+let personKeys = Object.keys(person);
+let addressPlaceHolders = Object.keys(person.address)
+console.log(personKeys);
+console.log(addressPlaceHolders);
+```
+### Object.values() 
+arrays of values of object
+
+```js
+let personValues = Object.values(person);
+console.log(personValues);
+```
+
+### Object.entries()
+Keys and values of object
+object to array 
+```js
+console.log(Object.entries(person));
+```
+
+
+### hasOwnProperty()
+check if a specific key or property exist in an object
+```js
+let isGreet = person.hasOwnProperty("address");
+console.log(isGreet); //true
+```
