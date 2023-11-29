@@ -227,39 +227,171 @@ const users2 = [
   }
   ];
 
-  const products = [
-{
-  _id: 'eedfcf',
-  name: 'mobile phone',
-  description: 'Huawei Honor',
-  price: 200,
-  ratings: [
-    { userId: 'fg12cy', rate: 5 },
-    { userId: 'zwf8md', rate: 4.5 }
-  ],
-  likes: []
-},
-{
-  _id: 'aegfal',
-  name: 'Laptop',
-  description: 'MacPro: System Darwin',
-  price: 2500,
-  ratings: [],
-  likes: ['fg12cy']
-},
-{
-  _id: 'hedfcg',
-  name: 'TV',
-  description: 'Smart TV:Procaster',
-  price: 400,
-  ratings: [{ userId: 'fg12cy', rate: 5 }],
-  likes: ['fg12cy']
-}
-];
-
 // Create a function called signUp which allows user to add to the collection. 
 // If user exists, inform the user that he has already an account.
+let user1 = {
+  _id: 'manik123',
+  username: 'Mnaik',
+  email: 'manik@gmail.com',
+  password: '656656',
+  createdAt:'29/11/2023 09:03 AM',
+  isLoggedIn: false
+}
 
 function signUp (obj = {}) {
-  
+  let userID = obj["_id"];
+  let alreadyHaveAccount = false;
+  for (let i = 0; i <users2.length; i++){
+    let temp = users2[i]._id;
+    if (temp == userID){
+      alreadyHaveAccount = true;
+    }
+  }
+  if (alreadyHaveAccount){
+    return `Alraedy have a account`;
+  }
+  users2.push(obj);
+  return `Account added to database`;
 }
+
+console.log(signUp(user1)); // Account added to database
+console.log(users2);
+
+
+// Create a function called signIn which allows user to sign in to the application
+
+function signIn(userID = "", password=""){
+  let doHaveAcount = false;
+  let accountPosition = 0;
+  for (let i = 0; i<users2.length; i++){
+    let tempUser = users2[i]._id;
+    let tempPassword = users2[i].password;
+    if (tempUser == userID && password == tempPassword){
+      doHaveAcount = true;
+      accountPosition = i;
+    }
+  }
+
+  if (doHaveAcount == true){
+    users2[accountPosition].isLoggedIn = true;
+    return `You are logged in. account deaials ${Object.values(users2[accountPosition])}`;
+  }
+  return `Accoount not found`;
+}
+
+console.log(signIn("manik123", "656656")); // You are logged in. account deaials manik123,Mnaik,manik@gmail.com,656656,29/11/2023 09:03 AM,false
+
+
+// ------ Product Array --------
+const products = [
+  {
+    _id: 'eedfcf',
+    name: 'mobile phone',
+    description: 'Huawei Honor',
+    price: 200,
+    ratings: [
+      { userId: 'fg12cy', rate: 5 },
+      { userId: 'zwf8md', rate: 4.5 }
+    ],
+    likes: []
+  },
+  {
+    _id: 'aegfal',
+    name: 'Laptop',
+    description: 'MacPro: System Darwin',
+    price: 2500,
+    ratings: [],
+    likes: ['fg12cy']
+  },
+  {
+    _id: 'hedfcg',
+    name: 'TV',
+    description: 'Smart TV:Procaster',
+    price: 400,
+    ratings: [{ userId: 'fg12cy', rate: 5 }],
+    likes: ['fg12cy']
+  }
+  ];
+
+
+  // The products array has three elements and each of them has six properties. a. 
+  //Create a function called rateProduct which rates the product b. 
+
+  function rateProduct (userID = "user", product ="", ratting = 5){
+    let isProductExist = false;
+    let productPosition = 0;
+    for (let i = 0; i<products.length; i++){
+      if (product == products[i].name){
+        isProductExist = true;
+        productPosition = i;
+      }
+    }
+    
+    if (isProductExist){
+      const user_rating = {}
+      user_rating.userId = userID;
+      user_rating.rate = ratting;
+      products[productPosition].ratings.push(user_rating);
+      return `ThankYou for your feedback.`;
+    }
+    return `Product not found`;
+  }
+
+  console.log(rateProduct("manik12", "TV", 4)); // ThankYou for your feedback.
+  console.log(products[2].ratings[1]); // { userId: 'manik12', rate: 4 }
+
+
+  // Create a function called averageRating which calculate the average rating of a product
+  function productExist (productId = ""){
+    let ifPoroductExit = false;
+    let productPosition = 0;
+    for (let i = 0; i < products.length; i++){
+      let tempProduct = products[i];
+      if (tempProduct._id == productId){
+        ifPoroductExit = true;
+        productPosition = i;
+      }
+    }
+
+    return [ifPoroductExit, productPosition];
+  }
+
+function averageRating (productId = ""){
+    let product = productExist(productId);
+    if (product[0] == true){
+      let productRating = products[product[1]].ratings;
+      let totalRating = 0;
+      for (let i = 0; i<productRating.length; i++){
+        totalRating += productRating[i].rate;
+      }
+      console.log(totalRating);
+      return totalRating/(productRating.length);
+    }
+}
+
+console.log(averageRating("hedfcg")); // 4.75
+
+// Create a function called likeProduct. 
+// This function will helps to like to the product if it is not liked 
+//and remove like if it was liked.
+
+function likeProduct(productId = ""){
+  let product = productExist(productId);
+  if (product[0]){
+    let like = products[product[1]].likes;
+    if (like.length < 1){
+      like.push("manik");
+      return  `Added to Liked`
+    }
+    else{
+      like.pop();
+      return `Removed from liked`
+    }
+  }
+  return `Product not found`
+}
+console.log(products[2].likes); // [ 'fg12cy' ]
+console.log(likeProduct("hedfcg")); // Removed from liked
+console.log(products[2].likes); // []
+console.log(likeProduct("hedfcg")); // Added to Liked
+console.log(products[2].likes); // [ 'manik' ]
