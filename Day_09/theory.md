@@ -167,6 +167,11 @@ const array6 = array5;
 console.log(array6.sort()); // [ 'Malati', 'Manik', 'Parash', 'Suman', 'Swapan' ]
 ```
 #### Sorting number
+```
+Compare Function - 
+- if negative value (-1) is return then a come before b. 
+- if positive value (1) return then b comes before a
+```
 ```js
 const num2 = [5, 8, 6, 2, 0];
 console.log(num2.sort((a, b) => {
@@ -189,3 +194,5 @@ function compareFnc (a, b){
 let num3 = [4, 2, 8, 1, 6];
 console.log(num3.sort(compareFnc)); //[ 8, 6, 4, 2, 1 ]
 ```
+
+#### Sorting object inside arrays
