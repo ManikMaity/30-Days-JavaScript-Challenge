@@ -383,4 +383,95 @@ function mostSpokenLanguage (countriesArr, numberOfLang){
 	 
 	 return sortedLangAndCountArray.slice(0, numberOfLang);
 }
-console.log(mostSpokenLanguage(countries6, 10)) // --> working 
+// console.log(mostSpokenLanguage(countries6, 3)) // --> working 
+/*[
+  { country: 'English', count: 91 },
+  { country: 'French', count: 45 },
+  { country: 'Arabic', count: 25 }
+] */
+
+
+// *** Use countries_data.js file create a function which create the ten most populated countries 
+
+// copy all countries data to not mutate 
+const countries7 = countries3.slice(0);
+
+
+function getTopPopulationCountry (countriesDataArray = [], numOfCountries = 0){
+	
+	//filter out not having population key
+	const countriesWithPopulation = countriesDataArray.filter(country => country.hasOwnProperty("population"));
+
+	//sort countries based on population
+	const sortedCountriesByPopulation = countriesWithPopulation.sort((country1, country2) =>{
+		let population1 = country1.population;
+		let population2 = country2.population;
+		if (population1 > population2){
+			return -1;
+		}
+		else if (population1 < population2){
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	})
+
+	// output array
+	let outputCountriesArray = [];
+	for (let i = 0; i < numOfCountries; i++){
+		let tempCountryObj = {};
+		tempCountryObj.counrty = sortedCountriesByPopulation[i].name;
+		tempCountryObj.population = sortedCountriesByPopulation[i].population;
+		outputCountriesArray.push(tempCountryObj);
+	}
+
+	return outputCountriesArray;
+}
+// console.log(getTopPopulationCountry(countries7, 4)) // --> working
+/*[
+  { counrty: 'China', population: 1402112000 },
+  { counrty: 'India', population: 1380004385 },
+  { counrty: 'United States of America', population: 329484123 },
+  { counrty: 'Indonesia', population: 273523621 }
+] */
+
+
+// *** Try to develop a program which calculate measure of central tendency of a sample(mean, median, mode) 
+// and measure of variability(range, variance, standard deviation). In addition to those measures find 
+// the min, max, count, percentile, and frequency distribution of the sample. You can create an object 
+// called statistics and create all the functions which do statistical calculations as method for the statistics object. 
+// Check the output below.
+
+const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26];
+
+const statistics = {};
+statistics.count = () => ages.length;
+statistics.Sum = () => ages.reduce((sum, age) => sum+age);
+statistics.Min = () => Math.min(...ages);
+statistics.Max = () => Math.max(...ages);
+statistics.Range = () => statistics.Max() - statistics.Min();
+statistics.Mean = () => Math.round(statistics.Sum()/ statistics.count());
+statistics.Median = () => {
+	const ages1 = ages.slice(0);
+	ages1.sort((a, b) => a-b);
+	if (ages1.length%2 == 0){
+		let index = (ages1.length/2)
+		return ((ages1[index]) + (ages1[index -1]))/2;
+	}
+	else{
+		let index = Math.floor(ages1.length/2);
+		return ages1[index];
+	}
+}
+statistics.Mode = () => {
+	const allAges = ages.filter((age, index) => ages.indexOf(age) === index);
+	
+}
+
+console.log(statistics.Mode())
+console.log(statistics.Median());
+console.log(statistics.Mean())
+console.log(statistics.Range());
+console.log(statistics.Min())
+console.log(statistics.count());
