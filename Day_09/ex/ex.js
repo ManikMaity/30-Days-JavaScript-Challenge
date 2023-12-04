@@ -492,3 +492,29 @@ function getLettersUsed (arr = [], letter = "a"){
     return letterUsed.length;
 }
 console.log(getLettersUsed (countries2, "i")); // 9
+
+
+
+// ------------------------------------------- LEVEL 3 ------------------------------------------------ 
+var countries3 = require('./countries.js');
+/* 
+{
+    "name": "Afghanistan",
+    "capital": "Kabul",
+    "languages": [
+            "Pashto",
+            "Uzbek",
+            "Turkmen"
+    ],
+    "population": 40218234,
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
+    "region": "Asia",
+    "area": 652230
+} ....
+*/
+
+// Use the countries information, in the data folder. 
+// Sort countries by name, by capital, by population 
+
+console.log("Sorted coutries bases on capitals")
+console.log(capitalSort);
