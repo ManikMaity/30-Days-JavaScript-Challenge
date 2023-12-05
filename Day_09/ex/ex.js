@@ -447,7 +447,7 @@ const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26
 
 const statistics = {};
 statistics.count = () => ages.length;
-statistics.Sum = () => ages.reduce((sum, age) => sum+age);
+statistics.Sum = () => ages.reduce((sum, age) => sum+age, 0);
 statistics.Min = () => Math.min(...ages);
 statistics.Max = () => Math.max(...ages);
 statistics.Range = () => statistics.Max() - statistics.Min();
@@ -464,14 +464,35 @@ statistics.Median = () => {
 		return ages1[index];
 	}
 }
-statistics.Mode = () => {
-	const allAges = ages.filter((age, index) => ages.indexOf(age) === index);
-	
+
+
+statistics.Verience = () => {
+	const mean = (statistics.Sum() / ages.length).toFixed(2);
+	const squaredDiffs = ages.map(age => (age - mean) ** 2);
+	const varience = squaredDiffs.reduce((sum, age) => sum + age, 0) / (ages.length - 1);
+	return varience;
 }
 
-console.log(statistics.Mode())
+statistics.Mode = () => {
+	// removing duplicates
+	const withoutDuplicate = ages.filter((age, index) => ages.indexOf(age) == index);
+
+	let agesAndCount = [];
+	for (let i = 0; i < withoutDuplicate.length; i++){
+		let tempObj = {};
+		const count = ages.filter(age => age == withoutDuplicate[i]).length;
+		tempObj.mode = withoutDuplicate[i];
+		tempObj.count = count;
+		agesAndCount.push(tempObj);
+	}
+	const agesAndCountSorted = agesAndCount.sort((item1, item2) => item2.count - item1.count)
+	return agesAndCountSorted[0];
+}
+
+console.log(statistics.Verience())
 console.log(statistics.Median());
 console.log(statistics.Mean())
 console.log(statistics.Range());
 console.log(statistics.Min())
 console.log(statistics.count());
+console.log(statistics.Mode())
