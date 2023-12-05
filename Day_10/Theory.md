@@ -92,3 +92,90 @@ console.log(intersectionOfFamily) // [ 'Paresh', 'Sumati' ]
 ```
 
 
+## Difference of sets
+```js
+const DifferenceOfFamily = ourFamily.filter(name => !setOfUnclesFamily.has(name));
+console.log(DifferenceOfFamily); // [ 'Swapan', 'Malati', 'Manik', 'Suman' ]
+```
+
+# Map
+
+## Ceating map
+- empty map ()
+- map from array
+
+### Empty Map
+```js
+const emptyMap = new Map();
+console.log(emptyMap); // Map(0) {}
+```
+
+### Map from arrays 
+Map takes arrays inside arrays.
+```js
+const personPlace = [ ["Manik", "Kokata"], ["Suman", "Kolkata"], ["Paresh", "Benapura"]];
+const personPlaceMap = new Map(personPlace);
+console.log(personPlaceMap);
+/*
+Map(3) {
+  'Manik' => 'Kokata',
+  'Suman' => 'Kolkata',
+  'Paresh' => 'Benapura'
+}
+ */
+```
+## Map methods 
+- Add element in map (.set(item1, item2))
+- Getting element from Map (.get(item))
+- checking map keys (.has(keyItem))
+
+
+### Adding values in map - .set(item1, item2)
+```js
+const techProgress = new Map();
+techProgress.set("HTML", "90%");
+techProgress.set ("CSS", "80%");
+console.log(techProgress);
+/*Map(6) {
+  'HTML' => '90%',
+  'CSS' => '80%'
+}*/
+```
+### Getting element from Map - (.get(item))
+```js
+const htmlProgress = techProgress.get('HTML');
+console.log(htmlProgress); // 90%
+```
+
+### checking map keys (.has(keyItem))
+Returns true or false
+```js
+const hasJS = techProgress.has("Javascript");
+const hasReact = techProgress.has("React")
+const onlyKeyCheck = techProgress.has("90%");
+console.log(hasJS); //true
+console.log(hasReact); //false
+console.log(onlyKeyCheck); // false
+```
+## Eccessing values using for..of loop 
+```js
+for (const tech of techProgress){
+    console.log(tech);
+}
+/*[ 'HTML', '90%' ]
+[ 'CSS', '80%' ]
+[ 'Git & Github', '60%' ]
+[ 'Boostrap', '80%' ]
+[ 'TailwindCSS', '80%' ]
+[ 'Javascript', '30%' ] */
+```
+```js
+for (const [tech, progress] of techProgress){
+    console.log(tech);
+}
+/*HTML
+CSS
+Git & Github
+Boostrap
+TailwindCSS
+Javascript */```
