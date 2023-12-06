@@ -1,6 +1,4 @@
 // ------------------------------------ LEVEL 1 ---------------------------------------
-const a = [4, 5, 8, 9]
-const b = [3, 4, 5, 7]
 const countries = ['Finland', 'Sweden', 'Norway']
 
 // create an empty set
@@ -33,3 +31,27 @@ for (let i = 0; i<countries.length; i++){
     mapOfCountries.set(countries[i], countries[i].length);
 }
 console.log(mapOfCountries); // Map(3) { 'Finland' => 7, 'Sweden' => 6, 'Norway' => 6 }
+
+
+
+
+// --------------------------------------- LEVEL 2 --------------------------------------------
+const a = [4, 5, 8, 9]
+const b = [3, 4, 5, 7]
+
+// Find a union b
+const c = [...a,...b];
+const union = new Set(c);
+console.log(union); //Set(6) { 4, 5, 8, 9, 3, 7 }
+
+// Find a intersection b
+const setOfA = new Set (a);
+const setOfB = new Set (b);
+const intersection = a.filter(num => setOfB.has(num));
+const setOfintersection = new Set(intersection);
+console.log(setOfintersection); // Set(2) { 4, 5 }
+
+// Find a with b -- difference
+const difference = a.filter(num => !setOfB.has(num));
+const setOfdifference = new Set(difference);
+console.log(setOfdifference); // Set(2) { 8, 9 }
