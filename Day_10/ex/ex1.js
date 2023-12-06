@@ -55,3 +55,66 @@ console.log(setOfintersection); // Set(2) { 4, 5 }
 const difference = a.filter(num => !setOfB.has(num));
 const setOfdifference = new Set(difference);
 console.log(setOfdifference); // Set(2) { 8, 9 }
+
+// ------------------------------------- LEVEL 3 -----------------------------------
+/* {
+    name: 'Afghanistan',
+    capital: 'Kabul',
+    languages: [ 'Pashto', 'Uzbek', 'Turkmen' ],
+    population: 40218234,
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg',
+    region: 'Asia',
+    area: 652230
+  } */
+
+var countriesData = require('../../Data/countries');
+
+// How many languages are there in the countries object file 
+const languageFromAllCounries = [];
+
+const importLanguage = countriesData.map((country) => {
+    if (country.hasOwnProperty("languages")){
+        languageFromAllCounries.push(country.languages);
+    }
+})
+const allLanguages = languageFromAllCounries.reduce((sum, item) => sum.concat(item));
+const setOfLang = new Set (allLanguages);
+console.log(setOfLang.size); // 123
+
+// *** Use the countries data to find the 10 most spoken languages
+function getMostSpokenLanguage (countriesArray, numOfCount){
+    // removing no languages country 
+    const countriesWithLang = countriesArray.filter(counrty => counrty.hasOwnProperty('languages'));
+
+    // all country language to one array
+    let allLanguages = [];
+    const importLangs = countriesWithLang.map(counrty => {
+        allLanguages.push(counrty.languages);
+    })
+    allLanguages = allLanguages.reduce((sum, country) => sum.concat(country));
+    
+
+    // language and count
+    const langAndCount = [];
+    const setOfLanguages = new Set(allLanguages);
+    for (const lang of setOfLanguages){
+        let tempLangObj = {};
+        const langCount = allLanguages.filter(language  => language == lang).length;
+        tempLangObj.Language  = lang;
+        tempLangObj.Count = langCount;
+        langAndCount.push(tempLangObj);
+    }
+    const sortedLangCount  = langAndCount.sort((lang1, lang2) => lang2.Count - lang1.Count);
+    
+    let outputResult = [];
+    const arrayToOutput  = sortedLangCount.map(lang => {
+        let tempObj = {};
+        tempObj[lang.Language] = lang.Count;
+        outputResult.push(tempObj);
+    });
+
+    return outputResult.slice(0, numOfCount);
+} 
+
+console.log(getMostSpokenLanguage(countriesData, 4)) //[ { English: 91 }, { French: 45 }, { Arabic: 25 }, { Spanish: 24 } ]
+
