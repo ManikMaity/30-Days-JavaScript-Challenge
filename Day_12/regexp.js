@@ -61,5 +61,62 @@ console.log(str.search(/i/ig)) // 0 - same , global no use
 console.log(str.search(/hello/ig)) // -1 - not found
 
 // Replacing a substring 
+// Executes a search for a match in a string, and replaces the matched substring with a replacement substring.
+// .replace()
 
+const sentance = `Python is the most beautiful language that a human begin has ever created.\
+I recommend python for a first programming language`
+
+const replacedSentance = sentance.replace(/python|Python/g, "JavaScript");
+console.log(replacedSentance);
+// JavaScript is the most beautiful language that a human begin has ever created.
+// I recommend JavaScript for a first programming language
+
+const txt = '%I a%m te%%a%%che%r% a%n%d %% I l%o%ve te%ach%ing.\
+T%he%re i%s n%o%th%ing as m%ore r%ewarding a%s e%duc%at%i%ng a%n%d e%m%p%ow%er%ing \
+p%e%o%ple.\
+I fo%und te%a%ching m%ore i%n%t%er%%es%ting t%h%an any other %jobs.\
+D%o%es thi%s m%ot%iv%a%te %y%o%u to b%e a t%e%a%cher.'
+
+console.log(txt.replace(/%/g, ""));
+// I am teacher and  I love teaching.There is nothing as more rewarding as educating and empowering people.
+// I found teaching more interesting than any other jobs.Does this motivate you to be a teacher.
+
+//Regexp charecters -
+// Square Bracket []
+// square bracket to include lower and upper case
+const txt2 = 'Apple and banana are fruits. An old cliche says an apple a day keeps the \
+ doctor way has been replaced by a banana a day keeps the doctor far far away. '
+ const replacedTxt2 = txt2.replace(/[Aa]pple/g, "Mango"); // it will replace substring with A or a;
+ console.log(replacedTxt2);
+
+let pattern7 = /[Aa]pple|[Bb]anana/g;
+console.log(txt2.match(pattern7)); // [ 'Apple', 'banana', 'apple', 'banana' ]
+
+
+// Escape character(\) 
+const txt3 = 'This regular expression example was made in January 12,  2020.'
+let pattern6 = /\d/g; // d is spexial charecter for digit
+console.log(txt3.match(pattern6)); // [ '1', '2', '2', '0', '2', '0' ]
+
+// One or more times(+) 
+console.log(txt3.match(/\d+/g)); // [ '12', '2020' ]
+
+// Period(.)
+const txt4 = 'Apple and banana are fruits';
+console.log(txt4.match(/[a]./g)); // [ 'an', 'an', 'an', 'a ', 'ar' ]
+console.log(txt4.match(/[a].+/g)); // [ 'and banana are fruits' ]
+
+// Zero or one times(?) 
+// ? means optional
+const txt5 = 'I am not sure if there is a convention how to write the word e-mail.\
+Some people write it email others may write it as Email or E-mail.'
+console.log(txt5.match(/E-?mail/gi));
+
+// Quantifier in RegExp 
+const txt6 = 'This regular expression example was made in December 6,  2019.';
+let pattern8 = /\b[a-zA-Z]{4}\b/g;
+let pattern9 = /\d{1,4}/g;
+console.log(txt6.match(pattern8)); // [ 'This', 'made' ]
+console.log(txt6.match(pattern9)); // [ '6', '2019' ]
 
