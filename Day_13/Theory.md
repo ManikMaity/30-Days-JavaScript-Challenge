@@ -134,3 +134,24 @@ Count: 5 */
 ```
 ### console.clear() 
 Clear the console
+
+
+## Extra Leaned 
+### How to import JavaScript files (import JS File into other JS File) for browser
+**Import File**
+```js
+export const country = {
+			"name": "Afghanistan",
+			"capital": "Kabul",
+	};
+```
+
+**Whre need to import**
+```js
+import { country } from "./countries.js";
+```
+- Have to include type = "module" in script tag html
+```html
+<script src="./level1.js" type="module"></script>
+```
+- It will work using vs code live server
