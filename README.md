@@ -2,7 +2,7 @@
 
 ## This is the GitHub Repository for [30 days Javascript learning challenge](https://30dayjavascript.js.org/)!.
 
-### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/39)
+### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/42)
 
 ## Table Of Content<hr>
 
@@ -21,7 +21,7 @@
 | **11**   | <ul><li>Destructuring</li><li>Destructuring arrays</li><li>1. If we want to skip a value of array for destructuring</li><li>2. We can use default values</li><li>3. We can use spred operator (...) in destructuring to specify rest of valuse</li><li>4. Destructuring during iteration</li><li>Object destructuring</li><li>1. Renaming during destructring</li><li>2. We can use default values if key is not found or undefined</li><li>3. Destructuring object during iteration</li><li>Spread or Rest Operator (...)</li><li>1. Spread operator to get rest of element</li><li>2. spread operator to copy array and merge arrays</li><li>3. Spread operator to copy object</li><li>4. changing object value while coping</li><li>5. Speard operator with unlimited arguments function</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:           |
 | **12**   | <ul><li>Regular Expressions</li><li>Pattern & Flags</li><li>Creating a pattern with RegExp Constructor</li><li>regexp constructor</li><li>RegExp object mathods</li><li>.test, .match, .search, .replace</li><li>Regexp charecters and meaning</li><li>Square Bracket []</li><li>Escape character()</li><li>One or more times(+)</li><li>Period(.)</li></ul>                  | ❌           |
 | **13**   | <ul><li>Console Object Methods</li><li>console.log</li><li>Substitution</li><li>CSS in console</li><li>Warn, Error & table</li><li>console.time() & console.timeEnd()</li><li>console.info()</li><li>console.assert()</li><li>console.group()</li><li>console.count()</li><li>console.clear()</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:            |
-| **14**   |                   |            |
+| **14**   |  <ul><li>Error Handling</li><li>try, catch, finally</li><li>Catch block peramiter</li><li>throw</li><li>Error Types</li><li>- Reference, Syntax and Type Errors</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  |:heavy_check_mark:            |
 | **15**   |                   |            |
 | **16**   |                   |            |
 | **17**   |                   |            |
