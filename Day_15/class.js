@@ -145,3 +145,57 @@ class newPerson {
 }
 const person4 = new newPerson("Swapan", "Maity");
 console.log(person4.score) // 0
+
+
+// gettter method 
+class user5 {
+    constructor (fName, lName, skills = []){
+        this.firstName = fName;
+        this.lastName = lName;
+        this.userSkills = skills;
+        this.experience = 0;
+    }
+    
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+    set addExp (expInYear) {
+        this.experience += expInYear;
+    }
+    set addSkills (skillName) {
+        this.userSkills.push(skillName);
+    }
+}
+
+const manik = new user5("Manik", "Maity", ["htnl", "css", "js"]);
+console.log(manik.fullName) // Manik Maity
+console.log(manik);
+
+// setter method 
+manik.addExp = 1;
+manik.addExp = 10;
+console.log(manik.experience); // 11
+
+manik.addSkills = "git";
+console.log(manik.userSkills); // [ 'htnl', 'css', 'js', 'git' ]
+
+// Static method
+class usefullMethods {
+    constructor(name = "Masnik"){
+        this.name = name;
+    }
+    static dateAndTime (){
+        const time = new Date();
+        const date = `${time.getDate()}/${time.getMonth()}/${time.getFullYear()}`
+        const timeNow = `${time.getHours()} : ${time.getMinutes()}`
+        return `${date}\n${timeNow}`;
+    }
+
+}
+console.log(usefullMethods.dateAndTime());
+/*
+1/0/2024
+8 : 27
+ */
+
+

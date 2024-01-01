@@ -132,3 +132,55 @@ const person4 = new newPerson("Swapan", "Maity");
 console.log(person4.score) // 0
 
 ```
+
+## gettter
+- get values from object
+- getter function is whote after constructor
+- `get` keyword is used before function to make a getter method 
+```js
+get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+```
+- when calling getter method dont use `()` after function name 
+```js
+console.log(manik.fullName) // Manik Maity
+```
+
+## setter
+- to update or set some values in object
+- `set` keyword is used before function to make a setter method.
+```js
+set addSkills (skillName) {
+        this.userSkills.push(skillName);
+    }
+```
+- we use setter method like this
+```js
+manik.addSkills = "git";
+console.log(manik.userSkills); // [ 'htnl', 'css', 'js', 'git' ]
+```
+
+## Static method
+- `static` keyword is used before the class funtion to define a static method
+- it is mostly used to store useful methods
+```js
+class usefullMethods {
+    constructor(name = "Masnik"){
+        this.name = name;
+    }
+    static dateAndTime (){
+        const time = new Date();
+        const date = `${time.getDate()}/${time.getMonth()}/${time.getFullYear()}`
+        const timeNow = `${time.getHours()} : ${time.getMinutes()}`
+        return `${date}\n${timeNow}`;
+    }
+
+}
+console.log(usefullMethods.dateAndTime());
+/*
+1/0/2024
+8 : 27
+ */
+```
+
