@@ -2,7 +2,7 @@
 
 ## This is the GitHub Repository for [30 days Javascript learning challenge](https://30dayjavascript.js.org/)!.
 
-### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/42)
+### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/45)
 
 ## Table Of Content<hr>
 
@@ -22,7 +22,7 @@
 | **12**   | <ul><li>Regular Expressions</li><li>Pattern & Flags</li><li>Creating a pattern with RegExp Constructor</li><li>regexp constructor</li><li>RegExp object mathods</li><li>.test, .match, .search, .replace</li><li>Regexp charecters and meaning</li><li>Square Bracket []</li><li>Escape character()</li><li>One or more times(+)</li><li>Period(.)</li></ul>                  | ❌           |
 | **13**   | <ul><li>Console Object Methods</li><li>console.log</li><li>Substitution</li><li>CSS in console</li><li>Warn, Error & table</li><li>console.time() & console.timeEnd()</li><li>console.info()</li><li>console.assert()</li><li>console.group()</li><li>console.count()</li><li>console.clear()</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:            |
 | **14**   |  <ul><li>Error Handling</li><li>try, catch, finally</li><li>Catch block peramiter</li><li>throw</li><li>Error Types</li><li>- Reference, Syntax and Type Errors</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  |:heavy_check_mark:            |
-| **15**   |                   |            |
+| **15**   | <ul><li>Classes</li><li>Class Syntax</li><li>Class Instantiation</li><li>Class Constructor - Syntax, example</li><li>Default values with constructor</li><li>Class methods making</li><li>Properties with initial value</li><li>gettter - get</li><li>setter - set</li><li>Static method</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:           |
 | **16**   |                   |            |
 | **17**   |                   |            |
 | **18**   |                   |            |
