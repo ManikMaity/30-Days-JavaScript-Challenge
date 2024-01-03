@@ -23,7 +23,7 @@
 | **13**   | <ul><li>Console Object Methods</li><li>console.log</li><li>Substitution</li><li>CSS in console</li><li>Warn, Error & table</li><li>console.time() & console.timeEnd()</li><li>console.info()</li><li>console.assert()</li><li>console.group()</li><li>console.count()</li><li>console.clear()</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:            |
 | **14**   |  <ul><li>Error Handling</li><li>try, catch, finally</li><li>Catch block peramiter</li><li>throw</li><li>Error Types</li><li>- Reference, Syntax and Type Errors</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  |:heavy_check_mark:            |
 | **15**   | <ul><li>Classes</li><li>Class Syntax</li><li>Class Instantiation</li><li>Class Constructor - Syntax, example</li><li>Default values with constructor</li><li>Class methods making</li><li>Properties with initial value</li><li>gettter - get</li><li>setter - set</li><li>Static method</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:           |
-| **16**   |                   |            |
+| **16**   | <ul><li>JSON</li><li>Example, Syntax</li><li>JSON to js Object - parse()</li><li>Reviver function with JSON.parse()</li><li>Object to JSON - stringify()</li><li>Filter with JSON.stringify</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:           |
 | **17**   |                   |            |
 | **18**   |                   |            |
 | **19**   |                   |            |
