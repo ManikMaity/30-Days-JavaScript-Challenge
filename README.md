@@ -2,7 +2,7 @@
 
 ## This is the GitHub Repository for [30 days Javascript learning challenge](https://30dayjavascript.js.org/)!.
 
-### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/45)
+### Current Javascript Learning Process Bar : ![](https://geps.dev/progress/51)
 
 ## Table Of Content<hr>
 
@@ -24,7 +24,7 @@
 | **14**   |  <ul><li>Error Handling</li><li>try, catch, finally</li><li>Catch block peramiter</li><li>throw</li><li>Error Types</li><li>- Reference, Syntax and Type Errors</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  |:heavy_check_mark:            |
 | **15**   | <ul><li>Classes</li><li>Class Syntax</li><li>Class Instantiation</li><li>Class Constructor - Syntax, example</li><li>Default values with constructor</li><li>Class methods making</li><li>Properties with initial value</li><li>gettter - get</li><li>setter - set</li><li>Static method</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:           |
 | **16**   | <ul><li>JSON</li><li>Example, Syntax</li><li>JSON to js Object - parse()</li><li>Reviver function with JSON.parse()</li><li>Object to JSON - stringify()</li><li>Filter with JSON.stringify</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  | :heavy_check_mark:           |
-| **17**   |                   |            |
+| **17**   | <ul><li>HTML5 Web Storage</li><li>sessionStorage, localStorage</li><li>setItem(), getItem(), removeItem(), clear(), key()</li><li>Usage of local storege</li><li>HTML5 Web Storage Objects</li><li>Setting item - localStorage.setItem('key', 'value');</li><li>Syntax, Example, JSON store</li><li>Getting item - localStorage.getItem('key')</li><li>Clearing the localStorage</li><li>clear one item, clear all item</li><li>Level1 ex done ✔️</li><li>Level2 ex done ✔️</li><li>Level3 ex done ✔️</li></ul>                  |:heavy_check_mark:            |
 | **18**   |                   |            |
 | **19**   |                   |            |
 | **20**   |               |          |
